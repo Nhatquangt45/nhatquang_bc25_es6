@@ -8,7 +8,7 @@ export default class Services {
     });
   }
 
-  deleteItem(id) {
+  deleteItemById(id) {
     return axios({
       url: API + "/" + id,
       method: "DELETE",
@@ -23,16 +23,9 @@ export default class Services {
     });
   }
 
-  getItemById(id) {
+  updateItem(id, data) {
     return axios({
       url: API + "/" + id,
-      method: "GET",
-    });
-  }
-
-  updateToDo(check, data) {
-    return axios({
-      url: API + "/" + check,
       method: "PUT",
       data: data,
     });
